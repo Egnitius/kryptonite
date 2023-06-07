@@ -1,38 +1,200 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header */
+header {
+  background-color: #003087; /* Superman Blue */
+  color: #D7DF23; /* Superman Gold */
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  color: #D7DF23; /* Superman Gold */
+}
+
+.currency-select label {
+  color: #D7DF23; /* Superman Gold */
+}
+
+/* Search Bar */
+.search-bar input[type="text"] {
+  background-color: #F8F8F8; /* Light Gray */
+  width: 300px;
+  height: 30px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+.search-bar button {
+  background-color: #003087; /* Superman Blue */
+  color: #fff;
+  height: 35px;
+  margin: 10px;
+}
+
+/* Top Five Cryptocurrencies */
+.top-five h2 {
+  color: #003087; /* Superman Blue */
+}
+
+/* Other Cryptocurrencies */
+.other-cryptos h2 {
+  color: #003087; /* Superman Blue */
+}
+
+.coin {
+  border: 2px solid #003087; /* Superman Blue */
+}
+
+.coin img {
+  border: 2px solid #d7df23; /* Superman Gold */
+  margin: 0 auto; /* Add this line */
+}
+.coin-image {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.coin-details h3 {
+  color: #003087; /* Superman Blue */
+}
+
+.coin-details p {
+  color: #333;
+}
+
+.coin-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.coin-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.coin {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* Add this line */
+  justify-content: center; /* Add this line */
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #003087; /* Superman Blue */
+  border-radius: 5px;
+  max-width: 250px;
 }
 
-.App-link {
-  color: #61dafb;
+.coin-details p {
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Table */
+table {
+  width: 80%;
+  background: #fff;
+  margin: 1em 0;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0.28571429rem;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.87);
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+table {
+  border: 2px solid #003087; /* Superman Blue */
+}
+
+th {
+  background-color: #003087; /* Superman Blue */
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: lightgrey; /* Light Gray */
+}
+
+/* Footer */
+footer {
+  background-color: #003087; /* Superman Blue */
+  color: #fff;
+  padding: 10px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: #333;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  .search-bar input[type="text"] {
+    width: 100%; /* Adjust the width as desired */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .coin {
+    max-width: 100%; /* Adjust the max-width as desired */
   }
+  
+  /* Add more styles as needed for smaller screens */
+}
+
+/* Styles for screens between 601px and 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Example styles */
+  header {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .coin-list {
+    flex-direction: column;
+  }
+  
+  /* Add more styles as needed for this screen size range */
+}
+
+/* Styles for screens larger than 1024px */
+@media (min-width: 1025px) {
+  /* Example styles */
+  header {
+    padding: 30px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  /* Add more styles as needed for larger screens */
 }
