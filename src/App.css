@@ -15,7 +15,8 @@ main {
 }
 
 h1 {
-  color: #D7DF23; /* Superman Gold */
+  color: gold;
+  /* color: red; */
 }
 
 .currency-select label {

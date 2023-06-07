@@ -160,7 +160,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Kryptonite</h1>
+        <h1 color="gold">Kryptonite</h1>
         <div className="currency-select">
           <label htmlFor="currency">Select Currency:  </label>
           <select
