@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import NewsSection from "./News.js";
 // eslint-disable-next-line
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -295,6 +296,9 @@ function App() {
               ))}
             </tbody>
           </table>
+        </div>
+        <div className="news-section">
+          <NewsSection />
         </div>
       </main>
       <footer>
