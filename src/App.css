@@ -8,13 +8,17 @@ header {
   background-color: #003087; /* Superman Blue */
   color: #D7DF23; /* Superman Gold */
   padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 main {
   margin-top: 20px;
 }
 
-h1 {
+.header h1 {
   color: gold;
   /* color: red; */
 }
@@ -139,11 +143,19 @@ tbody tr:nth-child(even) {
   background-color: lightgrey; /* Light Gray */
 }
 
-/* Footer */
 footer {
   background-color: #003087; /* Superman Blue */
   color: #fff;
   padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease;
+}
+
+.footer-hidden {
+  transform: translateY(100%);
 }
 
 h1, h2, h3 {
@@ -158,14 +170,26 @@ p {
 /* News Section */
 .news-section {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Update this line */
+}
+
+.news-section h2 {
+  color: #003087;
 }
 
 .news-card {
+  width: calc(33.33% - 20px);
   border: 1px solid #005fb3;
   background-color: #f5f5f5;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 20px;
+  display: flex; /* Add this line */
+  flex-direction: column; /* Add this line */
+  align-items: center; /* Add this line */
+  text-align: center; /* Add this line */
 }
 
 .news-card h3 {
@@ -179,16 +203,66 @@ p {
   color: #333;
 }
 
+.popup {
+  background-color: #F8F8F8; /* Superman Blue */
+  color: #003087; /* Superman Gold */
+  padding: 20px;
+  border: 2px solid #003087;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.popup p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.popup button {
+  background-color: #003087; /* Superman Blue */
+  color: #D7DF23; /* Superman Gold */
+  border: 2px solid #D7DF23; /* Superman Gold */
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.popup button:hover {
+  background-color: red;
+  color: black;
+}
+
+
 /* Styles for screens smaller than 600px */
 @media (max-width: 600px) {
   .search-bar input[type="text"] {
     width: 100%; /* Adjust the width as desired */
   }
-  
+
   .coin {
     max-width: 100%; /* Adjust the max-width as desired */
   }
-  
+
+  .coin-list {
+    justify-content: center; /* Center the coins vertically */
+  }
+
+  .coin-row {
+    flex-direction: column; /* Stack the coins vertically */
+  }
+
+  .coin {
+    margin: 10px auto; /* Center the coins horizontally */
+  }
+
   /* Add more styles as needed for smaller screens */
 }
 
@@ -198,15 +272,15 @@ p {
   header {
     padding: 10px;
   }
-  
+
   h1 {
     font-size: 24px;
   }
-  
+
   .coin-list {
     flex-direction: column;
   }
-  
+
   /* Add more styles as needed for this screen size range */
 }
 
@@ -216,10 +290,10 @@ p {
   header {
     padding: 30px;
   }
-  
+
   h1 {
     font-size: 36px;
   }
-  
+
   /* Add more styles as needed for larger screens */
 }

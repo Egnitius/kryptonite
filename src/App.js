@@ -177,6 +177,7 @@ function App() {
           </select>
         </div>
       </header>
+      <br></br>
       <main>
         <div className="search-bar">
           <input
@@ -299,7 +300,7 @@ function App() {
         </div>
         <div className="news-section">
           <NewsSection />
-        </div>
+        </div><br></br>
       </main>
       <footer>
         <p>&copy; 2023 Kryptonite. All rights reserved.</p>
